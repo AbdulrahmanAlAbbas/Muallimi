@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@400;700&display=swap');
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Changa', sans-serif;
+  background: url('/static/tuwaiaq-bg.png') no-repeat top right, #f7f4fc;
+  background-size: 300px auto;
+  background-attachment: fixed;
+  color: #1e1e1e;
+  direction: rtl;
+}
+
+.main-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 90px;
+  margin-bottom: 60px;
+  overflow: hidden;
+}
+
+/* ------------------- الهيدر ------------------- */
+.custom-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  background: #f7f4fc;
+  z-index: 1000;
+  box-shadow: 0 2px 12px rgba(155, 129, 222, 0.07);
+  border-bottom: 2px solid #e5d4fb;
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+
+.header-content {
+  width: 100%;
+  max-width: 1900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3vw;
+}
+
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-fixed {
+  height: 100px;
+  object-fit: contain;
+}
+
+.logo-ma3limi {
+  height: 170px;
+  object-fit: contain;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.controls button {
+  background-color: #5f259f;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: 'Changa', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  white-space: nowrap;
+}
+
+.controls button:hover {
+  background-color: #431d75;
+}
+
+/* ------------------- الفوتر ------------------- */
+.custom-footer {
+  background-color: #5f259f;
+  color: white;
+  text-align: center;
+  padding: 2px 4px;
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: bold;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-family: 'Changa', Arial, Tahoma, sans-serif;
+  z-index: 10;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ------------------- الشات ------------------- */
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+  background: #fefeff;
+  border-top: 10px solid #5f259f;
+  border-radius: 18px;
+  max-width: 1550px;
+  margin: auto;
+  width: 95vw;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+#chat-box {
+  flex: 1;
+  overflow-y: auto;
+  background: #fbfaff;
+  border: 1px solid #ddd5f3;
+  padding: 1rem;
+  border-radius: 12px;
+  padding-bottom: 12px;
+}
+
+#welcome-message,
+.welcome-message {
+  color: #5f259f !important;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 143px;
+}
+
+/* ------------------- الرسائل ------------------- */
+.message.user,
+.message.teacher {
+  line-height: 1.6;
+  font-size: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  animation: fadeInUp 0.3s ease-out;
+  margin-bottom: 1rem;
+  white-space: pre-wrap;
+  position: relative;
+  max-width: 85%;
+  width: fit-content;
+  padding: 12px 18px;
+  direction: rtl;
+}
+
+.message.user {
+  background: #ffffff;
+  border-right: 4px solid #5f259f;
+  color: #3B2785;
+  margin-left: auto;
+  text-align: right;
+  border-radius: 8px 0 0 8px;
+}
+
+.message.teacher {
+  background: #ffffff;
+  border-right: 4px solid #a38fce;
+  color: #3B2785;
+  margin-left: auto;
+  text-align: right;
+  border-radius: 8px 0 0 8px;
+  font-family: 'Changa', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  direction: rtl; /* لو ما موجود مسبقاً */
+}
+
+/* ------------------- الفورم ------------------- */
+#chat-form {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: auto;
+  margin-bottom: 0;
+  width: 95vw;
+  max-width: 1550px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  background: transparent;
+  position: relative;
+}
+
+#chat-form input {
+  flex: 1;
+  height: 62px;
+  padding: 0 1rem;
+  border-radius: 8px;
+  border: 1px solid #c8b9e5;
+  font-size: 1rem;
+  background: #f7f4fc;
+  box-sizing: border-box;
+  font-family: 'Changa', sans-serif;
+}
+
+#chat-form button {
+  flex-shrink: 0;
+  width: 62px;
+  height: 62px;
+  border: none;
+  border-radius: 8px;
+  background: #5f259f;
+  color: white;
+  font-family: 'Changa', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+#chat-form button:hover {
+  background: #471c78;
+}
+
+/* 1) الحاوية تملأ عرض الرسالة وتوسّط محتواها */
+.message.teacher .chat-img-container {
+  width: 100%;
+  margin-top: 12px;
+  text-align: center;
+}
+
+/* 2) حجم الصورة داخل الحاوية */
+.message.teacher .chat-img-container img {
+  display: inline-block;
+  width: 500px;   
+  height: auto;
+  border-radius: 4px;
+}
+
+.audio-icon-btn {
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 8px;
+  margin-top: 2px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+.audio-icon-btn:hover {
+  background: #471c7822;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
